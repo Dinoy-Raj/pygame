@@ -67,7 +67,7 @@ def gameloop():
     
     while not gameexit:
         
-        while gameoverc==True:
+        while gameover==True:
             gamedisplay.fill(white)
             message_to_screen("kalichath mathi mwoonose game over press c to play again")
             pygame.display.update()
