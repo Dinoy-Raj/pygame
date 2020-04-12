@@ -1,12 +1,12 @@
 # pygame
-
+=====================
 snake game using pygame
 
 Created by Dinoy Raj
 
+--------------------+
 
-Controls
-
+-CONTROLS-
 
 Play using Arrow keys
 
@@ -14,10 +14,12 @@ Q for exit
 
 C for play again
 
+---------------------+
 
-
-How to run?
+-HOW TO RUN?-
 
 pip install pygame
 
 python snake.py
+
+--------------------+
