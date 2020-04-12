@@ -31,13 +31,11 @@ def myquit():   #this
     sys.exit(0)
 
 #code part 3
-def drawGrid():
 
-	sizeGrd = window_width // blockSize
 
 def snake(blocksize,snakelist):
     for size in snakelist:
-        pygame.draw.rect(gamedisplay,black,[size[0]+5,size[1],blocksize])
+        pygame.draw.rect(gamedisplay,black,[size[0]+5,size[1],blocksize,blocksize],2)
     
 def message_to_screen(msg,color):
     screen_text=font.render(msg,True,color)
@@ -142,7 +140,7 @@ def gameloop():
         
     allspriteslist=[]
     allspriteslist.append(leadx)
-    allspriteslist.apend(leady)
+    allspriteslist.append(leady)
     snakelist.append(allspriteslist)
         
         
