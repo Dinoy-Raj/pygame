@@ -1,5 +1,5 @@
 #code part1
-import pygame,sys,os
+import pygame,sys
 import time 
 import random
 
@@ -15,11 +15,9 @@ window_width=800
 window_height=600
 gamedisplay=pygame.display.set_mode((window_width,window_height))
 pygame.display.set_caption("snake prod")
-font=pygame.font.SysFont(None,25,bold=True)
+font=pygame.font.SysFont(None,25,bold=True) #this
 
-def myquit():
-    pygame.quit()
-    sys.exit(0)
+
     
 #code part 2
 
@@ -28,7 +26,14 @@ FPS=5
 blocksize=20
 nopixel=0
 
+def myquit():   #this
+    pygame.quit()
+    sys.exit(0)
+
 #code part 3
+def drawGrid():
+
+	sizeGrd = window_width // blockSize
 
 def snake(blocksize,snakelist):
     for size in snakelist:
