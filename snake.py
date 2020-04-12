@@ -11,9 +11,9 @@ blue=(0,0,255)
 red=(255,0,0)
 
 
-windowwidth=800
-windowheight=600
-gamedisplay=pygame.display.set_mode((windowwidth,windowheight))
+window_width=800
+window_height=600
+gamedisplay=pygame.display.set_mode((window_width,window_height))
 pygame.display.set_caption("snake prod")
 font=pygame.font.SysFont(None,25,bold=True)
 
@@ -36,7 +36,7 @@ def snake(blocksize,snakelist):
     
 def message_to_screen(msg,color):
     screen_text=font.render(msg,True,color)
-    gamedisplay.blit(screen_text,[windowwidth/2,windowheight/2])
+    gamedisplay.blit(screen_text,[window_width/2,window_height/2])
     
 
 #code part4
@@ -46,8 +46,8 @@ def gameloop():
     gameover=False
     
     
-    leadx=windowwidth/2
-    leady=windowheight/2
+    leadx=window_width/2
+    leady=window_height/2
     
     changepixelsofx=0
     changepixelsofy=0
@@ -56,7 +56,7 @@ def gameloop():
     snakelength=1
     
     randomapplex=round(random.randrange(0,window_width-blocksize)/10.0)*10.0
-    randomappley=round(random.randrange(0,windowheight-blocksize)/10.0)*10.0
+    randomappley=round(random.randrange(0,window_height-blocksize)/10.0)*10.0
     
     #entering to the game
     
@@ -115,7 +115,7 @@ def gameloop():
 #logic2
 
 
-    if leadx>=windowwidth or leadx<0 or leady>=windowheight or leady<0:
+    if leadx>=window_width or leadx<0 or leady>=window_height or leady<0:
         gameover=True
         
         
@@ -160,8 +160,8 @@ def gameloop():
     
     if leadx>=randomapplex and leadx<=randomapplex+applethickness:
         if leady>=randomappley and leady<=randomappley+applethickness:
-            randomapplex=round(random.randrange(0, windowwidth-blocksize)/10.0)*10.0
-            randomappley=round(random.randrange(0, windowheight-blocksize)/10.0)*10.0
+            randomapplex=round(random.randrange(0, window_width-blocksize)/10.0)*10.0
+            randomappley=round(random.randrange(0, window_height-blocksize)/10.0)*10.0
             snakelength+=1
             
             
